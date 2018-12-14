@@ -1,0 +1,28 @@
+{
+  "name": "prisma-example",
+  "version": "1.0.0",
+  "description": "Example prisma app",
+  "main": "index.js",
+  "dependencies": {
+    "graphql-request": "^1.8.2"
+  },
+  "devDependencies": {
+    "poi": "^12.1.5",
+    "prisma": "^1.22.2"
+  },
+  "scripts": {
+    "serve": "poi --serve",
+    "playground": "prisma playground"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subuta/prisma-example.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subuta/prisma-example/issues"
+  },
+  "homepage": "https://github.com/subuta/prisma-example#readme"
+}
