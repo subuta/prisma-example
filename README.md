@@ -31,7 +31,7 @@ npm run playground
 
 #### Get users
 
-```
+```graphql
 {
   users {
     id
@@ -42,7 +42,7 @@ npm run playground
 
 #### Filter users by name
 
-```
+```graphql
 query ($name: String) {
   users(where: {
     name_contains: $name
@@ -67,7 +67,7 @@ mutation {
 
 #### Multiple mutation
 
-```
+```graphql
 mutation {
   firstUser: createUser(data: {
     name: "Taro Yamada"
@@ -91,7 +91,7 @@ mutation {
 
 #### Find user by id
 
-```
+```graphql
 {
   user(where: {
     id: "cjpnvbg55000c0828qmcz21iz"
@@ -104,7 +104,7 @@ mutation {
 
 #### Update user
 
-```
+```graphql
 mutation {
   updateUser(data: {
     name: "Saburo Yamada"
