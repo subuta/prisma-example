@@ -4,7 +4,10 @@
   "description": "Example prisma app",
   "main": "index.js",
   "dependencies": {
-    "graphql-request": "^1.8.2"
+    "graphql-request": "^1.8.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-hot-loader": "^4.6.0"
   },
   "devDependencies": {
     "poi": "^12.1.5",
@@ -20,7 +23,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/subuta/prisma-example/issues"
   },

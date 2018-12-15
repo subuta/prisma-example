@@ -24,6 +24,35 @@ prisma deploy
 
 ### Testing GraphQL
 
+```
+# Start Playground
+npm run playground
+```
+
+#### Get users
+
+```
+{
+  users {
+    id
+    name
+  }
+}
+```
+
+#### Filter users by name
+
+```
+query ($name: String) {
+  users(where: {
+    name_contains: $name
+  }) {
+    id
+    name
+  }
+}
+```
+
 #### Create user
 
 ```graphql
@@ -36,15 +65,28 @@ mutation {
 }
 ```
 
-#### Get users
+#### Multiple mutation
 
 ```
-`{
-  users {
-    id
+mutation {
+  firstUser: createUser(data: {
+    name: "Taro Yamada"
+  }) {
     name
   }
-}`
+  
+  secondUser: createUser(data: {
+    name: "Jiro Yamada"
+  }) {
+    name
+  }
+  
+  thirdUser: createUser(data: {
+    name: "Saburo Suzuki"
+  }) {
+    name
+  }
+}
 ```
 
 #### Find user by id
@@ -55,6 +97,20 @@ mutation {
     id: "cjpnvbg55000c0828qmcz21iz"
   }) {
     id
+    name
+  }
+}
+```
+
+#### Update user
+
+```
+mutation {
+  updateUser(data: {
+    name: "Saburo Yamada"
+  }, where: {
+    id: "cjpp8qljt00110828hwv6bert"
+  }) {
     name
   }
 }

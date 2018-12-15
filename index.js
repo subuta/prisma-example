@@ -1,15 +1,13 @@
-const { request } = require('graphql-request')
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-const query = `
-{
-  users {
-    id
-    name
-  }
-}
-`
+import App from './components/App'
+import { UserProvider } from './components/UserContext'
 
-const variables = {}
+const app = (
+  <UserProvider>
+    <App />
+  </UserProvider>
+)
 
-request('http://localhost:4466', query, variables)
-  .then(data => console.log(data))
+ReactDOM.render(app, document.querySelector('#app'))
